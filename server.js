@@ -3,6 +3,7 @@ const app = express()
 const mongoose = require("mongoose")
 const cors = require('cors')
 const conectar_bd = require("./service/conectar_bd")
+
 // Criando variaveis de ambiente
 const dotenv = require('dotenv')
 
@@ -56,6 +57,27 @@ app.get('/livros', (req, res) => {
     .catch((err) =>{
         res.status(500).json("Erro : " + err) // Erro no servidor
     })
+})
+
+// busca informações de cada categoria pelo id
+app.get("/search/:chavePrimaria" , (req,res) =>{
+
+    let resultado =  livros.findOne({chavePrimaria: req.params.chavePrimaria})
+    .then(
+        (resultado) => {
+            if(resultado){
+                // Caso dê certo devolve as informações
+                res.status(200).send(resultado)
+            }
+            else{
+                res.status(404).json("Resource not found")  // Erro na requisição//
+            }
+        } 
+    )
+    .catch((err) =>{
+        res.status(500).json("Erro : " + err) // Erro no servidor
+    })
+
 })
 
 
