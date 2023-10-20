@@ -2,7 +2,7 @@
 
   
 
-# Descrption  
+# Descrição  
 
 A API de Livraria oferece acesso a uma seleção diversificada de 15 livros, divididos em cinco catálogos distintos, abrangendo uma ampla gama de gêneros literários. Explore esta ferramenta para descobrir obras incríveis e encontrar o livro perfeito para cada preferência de leitura. 
 
