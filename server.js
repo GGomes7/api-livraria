@@ -5,12 +5,8 @@ const cors = require('cors')
 const conectar_bd = require("./service/conectar_bd")
 
 // Criando variaveis de ambiente
-const dotenv = require('dotenv')
-
 const livros = require('./models/livro');
-// const categorias = require('./models/categoria');
-
-dotenv.config()
+const categorias = require('./models/categoria');
 
 app.use(cors())
 
@@ -36,8 +32,6 @@ app.get('/', (req, res) => {
 })
 
 
-
-
 // busca todos as informações do banco
 app.get('/livros', (req, res) => {
 
@@ -59,10 +53,11 @@ app.get('/livros', (req, res) => {
     })
 })
 
-// busca informações de cada categoria pelo id
-app.get("/search/:chavePrimaria" , (req,res) =>{
 
-    let resultado =  livros.findOne({chavePrimaria: req.params.chavePrimaria})
+// busca informações de cada categoria pelo id
+app.get("/search/:idCategoria" , (req,res) =>{
+
+    let resultado =  categorias.findOne({idCategoria: req.params.idCategoria})
     .then(
         (resultado) => {
             if(resultado){
@@ -79,7 +74,6 @@ app.get("/search/:chavePrimaria" , (req,res) =>{
     })
 
 })
-
 
 
 // busca informações de cada livro pela chave primária
