@@ -14,6 +14,6 @@ A API de Livraria oferece acesso a uma seleção diversificada de 15 livros, div
 
 * **/livros** - Retorna todos os livros junto com todas as informações.
 
-* **/categorias** - Retorna todas as categorias de livros. *
+* **/categorias** - Retorna todas as categorias de livros.
 
 * **/:chavePrimaria** - Devolve o conjunto de informações no vetor, em que a chave primária esteja específicada para retornar apenas aquelas informações pedidas. 
