@@ -21,11 +21,11 @@ app.get('/', (req, res) => {
 
     }
     catch(error){
-        res.status(400).json("Server error!")
+        res.status(200).json("Server on...")
         
     } 
     finally{
-        res.status(200).json("Server on...")
+        res.status(400).json("Server error!")
     }
     
 
@@ -55,9 +55,9 @@ app.get('/livros', (req, res) => {
 
 
 // busca informações de cada categoria pelo id
-app.get("/search/:idCategoria" , (req,res) =>{
+app.get("/categorias" , (req,res) =>{
 
-    let resultado =  categorias.findOne({idCategoria: req.params.idCategoria})
+    let resultado =  categorias.find()
     .then(
         (resultado) => {
             if(resultado){
@@ -77,7 +77,7 @@ app.get("/search/:idCategoria" , (req,res) =>{
 
 
 // busca informações de cada livro pela chave primária
-app.get("/search/:chavePrimaria" , (req,res) =>{
+app.get("/:chavePrimaria" , (req,res) =>{
 
     let resultado =  livros.findOne({chavePrimaria: req.params.chavePrimaria})
     .then(
