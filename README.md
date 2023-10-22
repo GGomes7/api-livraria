@@ -93,6 +93,6 @@ A plataforma possui uma média de pedidos por hora, então atenção ao executá
 
 
 # Base URL 
-Você pode utilizar está API que já está na nuvem. A base URL para todas as requisições da API é:
+Caso não queira usar esse serviço na sua máquina local, você pode utilizar está API que já está na nuvem. A base URL para todas as requisições da API é:
 [base URL](https://vast-flannel-nightgown-fish.cyclic.cloud) 
 
