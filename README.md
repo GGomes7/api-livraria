@@ -39,10 +39,10 @@ Exemplo das propiedades quando é buscado pela chave primária de um livro
   - `id`: id do objeto (valor devolvido mas não utilizado).
   - `chavePrimaria`: nome de identificação do objeto para busca.
   - `nomeLivro`: nome completo do livro.
-  - `sinopse`: retorna a sinópse do livro.
+  - `sinopse`: retorna a sinopse do livro.
   - `anoLancamento`: data de lançamento do livro.
   - `genero`: mostra de qual gênero o livro pertence.
-  - `aurtor`: autor e esccritor do livro.
+  - `autor`: autor e escritor do livro.
   - `img`: imagem do livro buscado.
 
 
